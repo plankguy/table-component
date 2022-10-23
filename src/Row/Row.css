@@ -1,0 +1,35 @@
+.Row {
+  border-top: 1px solid var(--rowBorder, #DDD);
+  background-color: var(--rowBg, #FFF);
+}
+.Row:hover {
+  background-color: var(--rowBgHover, #EEE);
+}
+.Row.Selected {
+  background-color: var(--rowBgSelected, #DDD);
+}
+
+.Cell {
+  padding: var(--cellPaddingY, 0.5em) var(--cellPaddingX, 1.0em);
+  position: relative;
+}
+
+.Status {
+  padding-left: var(--statusCellPaddingX, 2.0em);
+}
+.Status:first-letter {
+  text-transform: uppercase
+}
+.StatusIcon {
+  border-radius: 100%;
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  position: absolute;
+  left: var(--cellPaddingX, 1.0em);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.StatusIcon.Available {
+  background-color: var(--statusAvailableBg, green);
+}
