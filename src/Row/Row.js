@@ -7,7 +7,10 @@ const Row = (props) => {
 
   return (
     <tr className={`Row${props.checked ? ' Selected' : ''}`}>
-      <td className="Cell Select">
+      <td 
+        className="Cell Select"
+        aria-label={`Select ${props.name} for download`}
+      >
         <input 
           type="checkbox" 
           onChange={handleCheck}

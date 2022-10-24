@@ -6,7 +6,7 @@ const Table = (props) => {
       <caption className="visually-hidden">File Downloads</caption>
       <thead>
         <tr>
-          <th className="Cell"></th>
+          <td className="Cell"></td>
           <th className="Cell">Name</th>
           <th className="Cell">Device</th>
           <th className="Cell">Path</th>
