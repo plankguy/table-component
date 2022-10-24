@@ -1,9 +1,9 @@
 import './Table.css';
 
 const Table = (props) => {
-
   return (
     <table className="Table">
+      <caption className="visually-hidden">File Downloads</caption>
       <thead>
         <tr>
           <th className="Cell"></th>

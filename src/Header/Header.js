@@ -15,7 +15,7 @@ function Header(props) {
       checkboxInput.current.checked = false;
       checkboxInput.current.indeterminate = true;
     }
-  }, [props.selectedDownloadCount]);
+  }, [props.selectedDownloadCount, props.totalDownloadCount]);
 
   const handleSelectAll = () => {
     props.selectAllDownloads();
@@ -54,7 +54,7 @@ function Header(props) {
         >
           <svg 
             className="downloadIcon"
-            aria-labelledby="donwloadTitle"
+            aria-hidden="true"
             role="img" 
             xmlns="http://www.w3.org/2000/svg" 
             width="24" 
@@ -62,7 +62,6 @@ function Header(props) {
             viewBox="0 0 24 24"
           >
             <path d="M16 11h5l-9 10-9-10h5v-11h8v11zm1 11h-10v2h10v-2z"/>
-            <title id="downloadTitle">Download Icon</title>
           </svg>
           <>Download Selected</> 
         </button>
