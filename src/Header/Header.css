@@ -1,0 +1,49 @@
+.Header {
+  display: flex;
+}
+
+.SelectAll {
+  padding-left: var(--cellPaddingX, 1.0em);
+}
+  .SelectAllLabel {
+    margin-left: 0.5em;
+    user-select: none;
+  }
+
+.Download {
+  padding-left: var(--cellPaddingX, 1.0em);
+}
+  .DownloadButton {
+    all: unset;
+    cursor: pointer;
+    padding: 0 0.5em;
+  }
+  .DownloadButton:disabled {
+    color: #BBB;
+  }
+  .DownloadButton:focus {
+    outline: 2px solid #BBB;
+  }
+  .downloadIcon {
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    margin-right: 0.3em;
+    fill: #666;
+  }
+  .DownloadButton:disabled .downloadIcon {
+    fill: #BBB;
+  }
+  .DownloadButton:not(:disabled):hover .downloadIcon {
+    fill: var(--hoverColor);
+  }
+
+.SelectAllLabel,
+.DownloadButton,
+.DownloadButton .downloadIcon {
+  transition: color 0.3s ease, fill 0.3s ease;
+}
+.SelectAllLabel:hover,
+.DownloadButton:not(:disabled):hover {
+  color: var(--hoverColor);
+}
